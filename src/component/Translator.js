@@ -50,13 +50,18 @@ class Translator extends Component {
             <option value="ru-en">Russian - English</option>
             <option value="en-ru">English - Russian</option>
           </select>
+          <br />
           <textarea
+            required
+            rows="5"
+            cols="50"
             placeholder="Enter text for translate"
             value={this.state.textForTranslate}
             onChange={event => {
               this.setState({ textForTranslate: event.target.value });
             }}
           />
+          <br />
           <button type="submit" value="submit">
             Translate
           </button>

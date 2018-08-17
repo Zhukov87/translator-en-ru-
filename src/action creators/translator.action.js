@@ -22,7 +22,7 @@ export function translator(text, lang, err) {
           payload: {
             text: text,
             translate: value.text,
-            err: (err = false)
+            err: false
           }
         });
       })
@@ -31,7 +31,7 @@ export function translator(text, lang, err) {
         dispatch({
           type: TRANSLATOR,
           payload: {
-            err: (err = true)
+            err: err
           }
         });
       });
