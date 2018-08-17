@@ -6,8 +6,8 @@ export default (state = initialState, action) => {
   const { type, payload } = action;
   switch (type) {
     case TRANSLATOR: {
-      console.log("payload.err", payload.err);
       if (payload.err) {
+        console.log("Error: ", payload.err);
         return [...state];
       }
       return [[payload.text, payload.translate[0]], ...state];

@@ -11,9 +11,8 @@ export function translator(text, lang, err) {
       .then(response => {
         if (response.status !== 200) {
           throw response.status;
-        } else {
-          return response.json();
         }
+        return response.json();
       })
       .then(value => {
         console.log("value", value.text);
