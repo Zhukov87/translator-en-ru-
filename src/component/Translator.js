@@ -9,6 +9,7 @@ class Translator extends Component {
     onLoad: false,
     lang: "ru-en"
   };
+
   handleSubmit = () => {
     this.setState({ onLoad: true });
     this.props.translator(this.state.textForTranslate, this.state.lang);
